@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.example</groupId>
+    <artifactId>TestDemo</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <dependencies>
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid-spring-boot-starter</artifactId>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-autoconfigure</artifactId>
+                </exclusion>
+            </exclusions>
+            <version>1.2.5</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>easyexcel</artifactId>
+            <version>2.2.7</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-collections4</artifactId>
+            <version>4.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.google.zxing</groupId>
+            <artifactId>core</artifactId>
+            <version>3.0.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>18.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.google.zxing</groupId>
+            <artifactId>javase</artifactId>
+            <version>3.0.0</version>
+        </dependency>
+        <dependency>
+
+
+            <groupId>org.springframework.boot</groupId>
+
+
+            <artifactId>spring-boot-starter</artifactId>
+
+
+            <version>2.2.2.RELEASE</version>
+
+
+            <scope>compile</scope>
+
+
+        </dependency>
+
+
+        <dependency>
+
+
+            <groupId>org.springframework.boot</groupId>
+
+
+            <artifactId>spring-boot-starter-json</artifactId>
+
+
+            <version>2.2.2.RELEASE</version>
+
+
+            <scope>compile</scope>
+
+
+        </dependency>
+
+
+        <dependency>
+
+
+            <groupId>org.springframework.boot</groupId>
+
+
+            <artifactId>spring-boot-starter-tomcat</artifactId>
+
+
+            <version>2.2.2.RELEASE</version>
+
+
+            <scope>compile</scope>
+
+
+        </dependency>
+
+
+        <dependency>
+
+
+            <groupId>org.springframework.boot</groupId>
+
+
+            <artifactId>spring-boot-starter-validation</artifactId>
+
+
+            <version>2.2.2.RELEASE</version>
+
+
+            <scope>compile</scope>
+
+
+            <exclusions>
+
+
+                <exclusion>
+
+
+                    <artifactId>tomcat-embed-el</artifactId>
+
+
+                    <groupId>org.apache.tomcat.embed</groupId>
+
+
+                </exclusion>
+
+
+            </exclusions>
+
+
+        </dependency>
+
+
+        <dependency>
+
+
+            <groupId>org.springframework</groupId>
+
+
+            <artifactId>spring-web</artifactId>
+
+
+            <version>5.2.2.RELEASE</version>
+
+
+            <scope>compile</scope>
+
+
+        </dependency>
+
+
+        <dependency>
+
+
+            <groupId>org.springframework</groupId>
+
+
+            <artifactId>spring-webmvc</artifactId>
+
+
+            <version>5.2.2.RELEASE</version>
+
+
+            <scope>compile</scope>
+
+
+        </dependency>
+
+
+
+    </dependencies>
+    <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+    </properties>
+
+</project>

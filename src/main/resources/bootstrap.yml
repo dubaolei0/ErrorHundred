@@ -1,0 +1,80 @@
+server:
+  port: 8080
+  servlet:
+      context-path: /test
+#spring:
+#  profiles:
+#    active: test
+#  application:
+#    name: bilei.getCustomer-test-local
+#  devtools:
+#    restart:
+#      enabled: true
+#  servlet:
+#    multipart:
+#      enabled: true
+#      max-file-size: 10MB
+#      max-request-size: 100MB
+#  redis:
+#    host: 192.168.125.69
+#    port: 6379
+#    timeout: 3000
+#
+#
+#  #cloud:
+#   # config:
+#    #  profile: prod #配置文件环境
+#     # name: yqz-system #配置文件名称
+#      #discovery:
+#       # enabled: true #表示通过注册中心获取配置服务中心地址
+#        #service-id: huibo-huibo.cloud-config #配置中心的服务注册名称
+#      #label: master
+#
+#eureka:
+#  instance:
+#    lease-renewal-interval-in-seconds: 3 #服务刷新时间配置，每隔这个时间会主动心跳一次
+#    lease-expiration-duration-in-seconds: 6 #服务过期时间配置,超过这个时间没有接收到心跳EurekaServer就会将这个实例剔除
+#    preferIpAddress: true
+#    instance-id: ${spring.cloud.client.ip-address}:${spring.application.name}:${server.port}
+#  client:
+#    service-url:
+#      defaultZone: http://192.168.131.92:8085/eureka,http://192.168.131.91:8084/eureka
+##      defaultZone: http://localhost:8761/eureka/
+#    registry-fetch-interval-seconds: 5 #eureka client刷新本地缓存时间
+#
+#
+####开启所有监控中心接口
+#management:
+#  endpoints:
+#    web:
+#      exposure:
+#        include: "*"
+#
+#mybatis-plus:
+#  configuration:
+#    map-underscore-to-camel-case: false
+#    #log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+#  global-config:
+#    db-config:
+#      id-type: AUTO
+#      table-underline: false
+#  mapper-locations: classpath*:/mapper/**/*.xml
+#  #动态表配置
+# # tableNames[0]: workFlowInfo
+#  #tableNames[1]: workFlowTemplateInfo
+#
+#logging:
+#  pattern:
+#    console: "%d{yyyy-MM-dd HH:mm:ss.SSS} %5level [%10thread] [%X{X-B3-TraceId}] %40.40logger{40} [%10method,%line] : %msg%n"
+#  level:
+#    huibo.cloud.yqz.lib.mapper: debug
+#
+#dubbo:
+#  application:
+#    name: label-service-consumer
+#  registry:
+#    address: 192.168.131.41:2181,192.168.131.42:2181,192.168.131.43:2181
+#    protocol: zookeeper
+#  protocol:
+#    port: 20880
+#  version: 2.0.0
