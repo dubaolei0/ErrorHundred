@@ -89,7 +89,6 @@ public class ConcurrentHashMapTest {
 
     @GetMapping("right")
     public String right() throws InterruptedException {
-
         ConcurrentHashMap<String, Long> concurrentHashMap = getData(ITEM_COUNT - 100);
 
         log.info("init size:{}", concurrentHashMap.size());
