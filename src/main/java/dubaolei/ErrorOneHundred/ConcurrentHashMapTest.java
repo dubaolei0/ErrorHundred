@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.Mapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.Map;
 import java.util.UUID;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ForkJoinPool;
@@ -35,10 +36,10 @@ public class ConcurrentHashMapTest {
 
 //帮助方法，用来获得一个指定元素数量模拟数据的ConcurrentHashMap
 
-    private ConcurrentHashMap<String, Long> getData(int count) {
-
+    private static ConcurrentHashMap<String, Long> getData(int count) {
+        // 创建一个IntStream并使用该range()方法在范围内添加一些元素。
         return LongStream.rangeClosed(1, count)
-
+                // 返回一个由该流的元素组成的Stream，每个元素装箱成Long
                 .boxed()
 
                 .collect(Collectors.toConcurrentMap(i -> UUID.randomUUID().toString(), Function.identity(),
