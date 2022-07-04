@@ -27,6 +27,11 @@ public class CopyOnWriteArrayListTest {
 
     //测试并发写的性能
 
+    /**
+     * 读多：          List<Integer> copyOnWriteArrayList = new CopyOnWriteArrayList<>();
+     * 写多、读写均衡  List<Integer> synchronizedList = Collections.synchronizedList(new ArrayList<>());
+     * @return
+     */
     @GetMapping("write")
 
     public Map testWrite() {

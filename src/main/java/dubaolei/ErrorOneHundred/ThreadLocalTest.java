@@ -1,7 +1,6 @@
 package dubaolei.ErrorOneHundred;
 
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -16,7 +15,6 @@ import java.util.Map;
  * @createTime 2022年05月22日 17:18:00
  */
 @RestController
-@RequestMapping("threadlocal")
 public class ThreadLocalTest{
     //  ThreadLocal.withInitial = new ThreadLocal ，并设置初始值
     private static final ThreadLocal<Integer> currentUser = ThreadLocal.withInitial(() -> null);

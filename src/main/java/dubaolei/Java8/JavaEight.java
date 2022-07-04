@@ -66,6 +66,8 @@ public class JavaEight {
         //最大值/最小值元素：maxBy、minBy  这两个函数就是求聚合元素中指定比较器中的最大/最小元素。比如，求年龄最大/最小的Student对象：
         Optional<Student> maxBy = students.stream().collect(Collectors.maxBy(Comparator.comparing(Student::getAge)));
         Student student = maxBy.get();
+        // 最大值最小值(reduce方式)
+        Integer integer = students.stream().map(Student::getAge).reduce(Integer::min).orElse(0);
         /** 聚合分组
          *  1、聚合元素：toList、toSet、toCollection
          *  这几个函数是将聚合之后的元素，重新封装到队列中，然后返回。比如，得到所有Student的 ID 列表，只需要根据需要的结果类型使用不同的方法即可
@@ -83,7 +85,7 @@ public class JavaEight {
          *  这两个方法的作用是将聚合元素，重新组装为Map结构，也就是 k-v 结构。两者用法一样，区别是toMap返回的是Map，toConcurrentMap返回ConcurrentMap
          *  也就是说，toConcurrentMap返回的是线程安全的 Map 结构。
          */
-        // 聚合Student的 id
+        // 聚合Student的 id 和 Student
         Map<String, Student> collect = students.stream().collect(Collectors.toMap(Student::getId, Function.identity()));
         // 但是，如果 id 有重复的，会抛出java.lang.IllegalStateException: Duplicate key异常，所以，为了保险起见，我们需要借助toMap另一个重载方法：
         Map<String, Student> collect2 = students.stream().collect(Collectors.toMap(Student::getId, Function.identity(), (x, y) -> x));
@@ -120,7 +122,7 @@ public class JavaEight {
         Integer reduce = students.stream().map(Student::getAge).reduce(0, Integer::sum);
         Integer integer1 = students.stream().map(Student::getAge).reduce(Integer::sum).orElse(0);
         // 最大值最小值
-        Integer integer = students.stream().map(Student::getAge).reduce(Integer::min).orElse(0);
+        Integer integer11 = students.stream().map(Student::getAge).reduce(Integer::min).orElse(0);
     }
 
 }
