@@ -1,0 +1,30 @@
+server:
+  port: 8080
+  servlet:
+    encoding:
+      charset: UTF-8
+      force: true
+      enabled: true
+
+spring:
+#  main:
+#    allow-bean-definition-overriding: true
+#  application:
+#    name: TestDemo
+#  profiles:
+##    active: 'prod'
+#    active: test
+#mybatis-plus:
+#  configuration:
+#    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+  datasource:
+    url: jdbc:mysql://localhost:3308/mysql?characterEncoding=utf8&characterSetResults=utf8&useSSL=false&serverTimezone=GMT%2b8&allowPublicKeyRetrieval=true
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  quartz:
+    job-store-type: jdbc
+    jdbc:
+      initialize-schema: NEVER
