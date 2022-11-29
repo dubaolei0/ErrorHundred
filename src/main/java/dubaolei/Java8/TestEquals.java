@@ -4,7 +4,7 @@ package dubaolei.Java8;
  * @author dubaolei
  * @version 1.0.0
  * @ClassName TestEquals.java
- * @Description TODO
+ * @Description 11
  * @createTime 2022年11月10日 18:09:00
  */
 public class TestEquals {
