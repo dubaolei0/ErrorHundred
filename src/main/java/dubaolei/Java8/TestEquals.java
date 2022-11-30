@@ -10,7 +10,7 @@ package dubaolei.Java8;
 public class TestEquals {
 
     public static void main(String[] args) {
-        int int1 = 12;
+        int int1 = 33;
         int int2 = 12;
 
         Integer integer1 = new Integer(12);
