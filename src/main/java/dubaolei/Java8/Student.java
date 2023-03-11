@@ -18,6 +18,9 @@ public class Student {
     private int age;
     private double score;
 
+    public Student() {
+    }
+
     public Student(String id, String name, LocalDate birthday, int age, double score) {
         this.id = id;
         this.name = name;
@@ -64,5 +67,16 @@ public class Student {
 
     public void setScore(double score) {
         this.score = score;
+    }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "id='" + id + '\'' +
+                ", name='" + name + '\'' +
+                ", birthday=" + birthday +
+                ", age=" + age +
+                ", score=" + score +
+                '}';
     }
 }

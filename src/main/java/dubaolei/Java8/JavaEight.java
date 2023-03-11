@@ -80,7 +80,7 @@ public class JavaEight {
         // TreeSet: [1, 2, 3]
         Collection<String> idTreeSet = students.stream().map(Student::getId).collect(Collectors.toCollection(TreeSet::new));
 
-        /**
+        /** todo 转为map操作
          *  2、聚合元素：toMap、toConcurrentMap
          *  这两个方法的作用是将聚合元素，重新组装为Map结构，也就是 k-v 结构。两者用法一样，区别是toMap返回的是Map，toConcurrentMap返回ConcurrentMap
          *  也就是说，toConcurrentMap返回的是线程安全的 Map 结构。

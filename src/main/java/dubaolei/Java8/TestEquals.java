@@ -1,5 +1,13 @@
 package dubaolei.Java8;
 
+import com.alibaba.fastjson.JSON;
+import org.apache.commons.lang3.StringUtils;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.stream.Collectors;
+
 /**
  * @author dubaolei
  * @version 1.0.0
@@ -10,25 +18,20 @@ package dubaolei.Java8;
 public class TestEquals {
 
     public static void main(String[] args) {
-        int int1 = 12;
-        int int2 = 12;
+        List<Student> objects = null;
+//        Student student1= new Student();
+//        student1.setAge(1);
+//        student1.setBirthday(null);
+//        objects.add(student1);
+//
+//        Student student2= new Student();
+//        student2.setAge(2);
+//        student2.setBirthday(null);
+//        objects.add(student2);
+        List<Student> cateLogCodeList = objects.stream().filter(s -> s != null).collect(Collectors.toList());
+        System.out.println("1");
 
-        Integer integer1 = new Integer(12);
-        Integer integer2 = new Integer(12);
-        Integer integer3 = new Integer(127);
 
-        Integer a1 = 127;
-        Integer a2 = 127;
-
-        Integer a = 128;
-        Integer b = 128;
-
-        System.out.println("int1 == int2 -> " + (int1 == int2));
-        System.out.println("int1 == integer1 -> " + (int1 == integer1));
-        System.out.println("integer1 == integer2 -> " + (integer1 == integer2));
-        System.out.println("integer3 == a1 -> " + (integer3 == a1));
-        System.out.println("a1 == a2 -> " + (a1 == a2));
-        System.out.println("a == b -> " + (a == b));
     }
 
 
